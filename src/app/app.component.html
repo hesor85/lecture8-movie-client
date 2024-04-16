@@ -1,6 +1,6 @@
-<button (click)="getMovies()">Get movies</button>
+<button mat-button (click)="getMovies()">Get movies</button>
 
 <ng-container *ngIf="data.length > 0; else placeholder">
-  <app-result *ngFor="let movie of data" [label]="movie.title"></app-result>
+  <app-result [data]="data"></app-result>
 </ng-container>
 <ng-template #placeholder><p>No data to show</p></ng-template>
